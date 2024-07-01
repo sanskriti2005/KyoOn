@@ -7,9 +7,12 @@ const port = 8000;
 
 // API: GET : / : return text "hello world!"
 app.get("/",(req, res) =>{
-    // req = request
-    // res = respond
+    // req = contains all data from request
+    // res = contains all data from respond
     res.send("Hello World!");
 });
 
-// Now we tell express our server port
+// Now we tell express our server will run on port 8000
+app.listen(port, () => {
+    console.log("App is running on port " + port);
+});
